@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>charity: water — From dollars to a wellspring</title>
+  
+  <!-- Google Fonts: Montserrat (matches charity: water's geometric sans-serif) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      background-color: #003366; /* Dark navy brand accent */
+      font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+    }
+
+       /* Outer Wrapper framing the angled blue margins */
+    .landing-wrapper {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      background-color: #003366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Main Hero Banner with custom geometric clip-path */
+    .hero-container {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      background-color: #000;
+      /* Background photo layered with smooth dark gradient overlays for readability */
+      background-image: 
+        linear-gradient(115deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.85) 36%, rgba(0, 0, 0, 0.35) 60%, rgba(0, 0, 0, 0) 85%),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.2) 30%, transparent 60%),
+        url('Ambote-CharityWater-09667.jpg');
+      background-size: cover;
+      background-position: center right;
+      background-repeat: no-repeat;
+      
+      /* Angled geometric cuts seen at the bottom-left and right edge */
+      clip-path: polygon(
+        0% 0%, 
+        100% 0%, 
+        100% 20%, 
+        100% 20%, 
+        100% 85%, 
+        10% 100%, 
+        0% 60%
+      );
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 55px 70px;
+    }
+
+    /* Top Navigation / Logo Area */
+    .hero-header {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 14%; /* Positions logo just before the diagonal cutoff */
+    }
+
+    .brand-logo {
+      width: 200px;
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
+    }
+
+    /* Content Area */
+    .hero-content {
+      max-width: 580px;
+      margin-top: -20px;
+      margin-bottom: auto;
+      z-index: 2;
+    }
+
+    .hero-title {
+      color: #fff7e1;
+      font-size: 40px;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-description {
+      color: #fff7e1;
+      font-size: 0.95rem;
+      font-weight: 400;
+      line-height: 1.55;
+      max-width: 440px;
+      margin-bottom: 2.5rem;
+      letter-spacing: 0.1px;
+    }
+
+    /* CTA Button */
+    .btn-donate {
+      display: inline-block;
+      background-color: #FFC907; /* charity: water iconic yellow (The robot was fucking wrong and put some randon ass piss yellow.) */ 
+      color: #ffffff;
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 16px 36px;
+      border-radius: 0; /* Crisp rectangular edges */
+      transition: background-color 0.2s ease, transform 0.15s ease;
+      letter-spacing: 0.3px;
+    }
+
+    .btn-donate:hover {
+      background-color: #159A48;
+      transform: translateY(-1px);
+    }
+
+    .btn-donate:active {
+      transform: translateY(0);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1024px) {
+      .hero-container {
+        padding: 40px 40px;
+        clip-path: none; /* Flatten clip-path on smaller screens for cleaner fit */
+      }
+      .hero-header {
+        padding-right: 0;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-container {
+        padding: 30px 24px;
+        background-position: 65% center;
+      }
+      .brand-logo {
+        width: 85px;
+      }
+      .hero-title {
+        font-size: 2rem;
+      }
+      .hero-description {
+        font-size: 0.88rem;
+      }
+      .btn-donate {
+        width: 100%;
+        text-align: center;
+        padding: 14px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="landing-wrapper">
+    <main class="hero-container">
+      
+      <!-- Top Right Brand Logo -->
+      <header class="hero-header">
+        <img 
+          src="charitywater_logo_vertical_WhiteText.png" 
+          alt="charity: water logo" 
+          class="brand-logo"
+        >
+      </header>
+
+      <!-- Main Copy & CTA -->
+      <section class="hero-content">
+        <h1 class="hero-title">
+          From dollars to a wellspring.<br>
+          It starts with you.
+        </h1>
+        <p class="hero-description">
+          Anonymous tip or generous sum &mdash; One-time donor or a new partner &mdash; charity: water will ensure that your actions water a community.
+        </p>
+        <a href="https://www.charitywater.org/donate" class="btn-donate">Make a Donation</a>
+      </section>
+
+    </main>
+  </div>
+
+</body>
+</html>
