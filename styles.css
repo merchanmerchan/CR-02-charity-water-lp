@@ -45,7 +45,7 @@ section {
 .hero {
   position: relative; /* Needed for overlay */
   /* Set a background image that covers the whole section */
-  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80');
+  background-image: url('img/Ambote-CharityWater-09667.jpg');
   background-size: cover;      /* Make the image cover the whole area */
   background-position: center; /* Center the image */
   background-repeat: no-repeat;
@@ -87,13 +87,15 @@ section {
 /* Add accent color to section headings */
 h2 {
   color: #2E9DF7; /* Primary blue */
-  margin-top: 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
   font-weight: bold;
+  text-align: center;
 }
 
 /* Call-to-Action Section Styles */
 .call-to-action {
-  background-color: #FFC907; /* Primary Yellow */
+  background-color: #8BD1CB; /* Primary Yellow */
   color: #222;
   text-align: center;
   padding: 30px 20px;
@@ -106,29 +108,6 @@ h2 {
   border-radius: 10px;
   margin-bottom: 16px;
   box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
-}
-
-/* Donate Button Styles */
-.donate-button {
-  display: inline-block;
-  background-color: #4FCB53; /* Green */
-  color: #fff;
-  padding: 14px 32px;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  font-size: 1.1em;
-  margin-top: 18px;
-  box-shadow: 0 2px 8px rgba(79, 203, 83, 0.10);
-  transition: background 0.3s, transform 0.2s;
-  border: none;
-  cursor: pointer;
-}
-
-/* Change button color when hovered */
-.donate-button:hover {
-  background-color: #159A48; /* Dark Green */
-  transform: translateY(-2px) scale(1.04); /* Slight lift */
 }
 
 /* Add some spacing between sections */
@@ -144,22 +123,6 @@ section {
 
 /* This media query applies styles when the screen is 600px wide or less (like on most phones) */
 @media (max-width: 600px) {
-  /* Make hero section padding smaller on small screens */
-  .hero {
-    padding: 32px 8px;
-    font-size: 1em;
-  }
-
-  /* Make headline font size smaller so it fits on small screens */
-  .hero h1 {
-    font-size: 1.4em;
-  }
-
-  /* Make subheadline font size smaller */
-  .hero p {
-    font-size: 1em;
-  }
-
   /* Make story and call-to-action sections have less padding */
   .story,
   .call-to-action,
@@ -167,7 +130,10 @@ section {
     padding: 14px 8px;
   }
 
+  
+
   /* Make impact story image smaller and stack above the text */
+  .impact-story,
   .impact-content {
     display: block; /* Stack items vertically */
     text-align: center;
@@ -195,4 +161,73 @@ section {
   .impact-image {
     width: 300px;
   }
+}
+
+
+    /* Outer Wrapper framing the angled blue margins */
+.landing-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #003366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-logo {
+  width: 125px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
+}
+
+/* Content Area */
+.hero-content {
+  max-width: 580px;
+  margin-top: -20px;
+  margin-bottom: auto;
+  z-index: 2;
+}
+
+.hero-title {
+  color: #fff7e1;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  margin-bottom: 1.25rem;
+}
+
+.hero-description {
+  color: #fff7e1;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.55;
+  max-width: 440px;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.1px;
+}
+
+/* CTA Button */
+.btn-donate {
+  display: inline-block;
+  background-color: #FFC907; /* charity: water iconic yellow (The robot was fucking wrong and put some randon ass piss yellow.) */ 
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 16px 36px;
+  border-radius: 0; /* Crisp rectangular edges */
+  transition: background-color 0.2s ease, transform 0.15s ease;
+  letter-spacing: 0.3px;
+}
+
+.btn-donate:hover {
+  background-color: #159A48;
+  transform: translateY(-1px);
+}
+
+.btn-donate:active {
+  transform: translateY(0);
 }
