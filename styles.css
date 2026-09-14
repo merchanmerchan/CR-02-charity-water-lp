@@ -12,6 +12,18 @@ Secondary Colors:
 - Dark Green: #159A48
 - Pink:       #F16061
 
+I have no clue whatever these colors are.
+But here are the colors from the brand usage presentation
+
+Yellow: #FFC907
+Navy:   #003366
+Cyan:   #77A8BB
+White:  #FFF7E1
+Black:  #1A1A1A
+Skin1:  #FED8C1
+Skin2:  #BF6C46
+Grey:   #CBCCD1
+
 Fonts:
 - Proxima Nova
 - Avenir
@@ -25,7 +37,7 @@ Fonts:
 
 /* Set up the main font and background color for the whole page */
 body {
-  background-color: #f4f8fb; /* Soft light blue for a fresh look */
+  background-color: #FFF7E1; 
   font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -34,9 +46,9 @@ body {
 
 /* Add a slight shadow and rounded corners to each section for depth */
 section {
-  background: #fff; /* White background for sections */
+  background: #FFF7E1; /* White background for sections */
   border-radius: 12px; /* Rounded corners */
-  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07); /* Soft blue shadow */
+  box-shadow: 0 2px 8px rgba(119, 168, 187, 0.07); /* Soft blue shadow */
   margin: 24px 10px; /* Space between sections */
   padding: 24px 16px;
 }
@@ -49,15 +61,16 @@ section {
   background-size: cover;      /* Make the image cover the whole area */
   background-position: center; /* Center the image */
   background-repeat: no-repeat;
-  color: #fff;                 /* White text for contrast */
+  color: #FFF7E1;                 /* White text for contrast */
   text-align: center;          /* Center the text */
-  padding: 60px 20px;          /* Add space above and below */
-  border-radius: 0 0 16px 16px; /* Only round bottom corners */
+  padding: 600px 60px;          /* Add space above and below */
+  margin: 0px;
+  border-radius: 0 0 0 0; /* Only round bottom corners */
+
 
   /* Add a dark overlay for better text readability */
   /* This uses a simple linear-gradient overlay */
   background-blend-mode: darken;
-  background-color: rgba(46, 157, 247, 0.45); /* Blue overlay */
 }
 
 /* Make the headline bold and modern */
@@ -78,15 +91,15 @@ section {
 
 /* Story Section Styles */
 .story {
-  background-color: #8BD1CB; /* Secondary Light Blue */
-  color: #222;
+  background-color: #FED8C1; /* Secondary Light Blue */
+  color: #1A1A1A;
   text-align: center;
   padding: 30px 20px;
 }
 
 /* Add accent color to section headings */
 h2 {
-  color: #2E9DF7; /* Primary blue */
+  color: #003366; /* Primary blue */
   margin-top: 5px;
   margin-bottom: 5px;
   font-weight: bold;
@@ -95,8 +108,8 @@ h2 {
 
 /* Call-to-Action Section Styles */
 .call-to-action {
-  background-color: #8BD1CB; /* Primary Yellow */
-  color: #222;
+  background-color: #FED8C1; /* Primary Yellow */
+  color: #1A1A1A;
   text-align: center;
   padding: 30px 20px;
 }
@@ -129,8 +142,6 @@ section {
   .donation-section {
     padding: 14px 8px;
   }
-
-  
 
   /* Make impact story image smaller and stack above the text */
   .impact-story,
@@ -169,7 +180,7 @@ section {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background-color: #003366;
+  background-color: #BF6C46;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -178,6 +189,7 @@ section {
 .brand-logo {
   width: 125px;
   height: auto;
+  padding-left: 25px;
   display: block;
   filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
 }
@@ -190,30 +202,11 @@ section {
   z-index: 2;
 }
 
-.hero-title {
-  color: #fff7e1;
-  font-size: 40px;
-  font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -0.5px;
-  margin-bottom: 1.25rem;
-}
-
-.hero-description {
-  color: #fff7e1;
-  font-size: 0.95rem;
-  font-weight: 400;
-  line-height: 1.55;
-  max-width: 440px;
-  margin-bottom: 2.5rem;
-  letter-spacing: 0.1px;
-}
-
 /* CTA Button */
 .btn-donate {
   display: inline-block;
   background-color: #FFC907; /* charity: water iconic yellow (The robot was fucking wrong and put some randon ass piss yellow.) */ 
-  color: #ffffff;
+  color: #FFF7E1;
   font-size: 1.05rem;
   font-weight: 700;
   text-decoration: none;
